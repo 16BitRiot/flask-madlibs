@@ -1,0 +1,16 @@
+<body>
+    <h1>Welcome!</h1>
+    <h2>Please enter </h2>
+    <form method="POST" action="{{ url_for('home') }}">
+      <input type="text" id="place" placeholder="place" name="place">
+      <input type="text" id="noun" placeholder="noun" name="noun">
+      <input type="text" id="verb" placeholder="verb" name="verb">
+      <input type="text" id="adjective" placeholder="adjective" name="adjective">
+      <input type="text" id="plural_noun" placeholder="plural_noun" name="plural_noun">
+      <button>Submit</button>
+    </form>
+    {% if generated_text %}
+      <p>{{ generated_text }}</p>
+    {% endif %}
+  </body>
+  
